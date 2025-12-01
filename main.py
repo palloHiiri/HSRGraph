@@ -1,0 +1,20 @@
+from rdflib import Graph
+from ontology.build import build_ontology
+from parsers.character_parser import parse_characters
+from parsers.lightcone_parser import parse_light_cones
+from parsers.relics_parser import parse_relics
+
+ONTOLOGY_PATH = "data/hsr_ontology.rdf"
+
+if __name__ == "__main__":
+    build_ontology(ONTOLOGY_PATH)
+
+    g = Graph()
+    g.parse(ONTOLOGY_PATH, format="xml")
+
+    parse_characters(g, "https://game8.co/games/Honkai-Star-Rail/archives/404256")
+    parse_light_cones(g, "https://game8.co/games/Honkai-Star-Rail/archives/406599")
+    parse_relics(g, "https://game8.co/games/Honkai-Star-Rail/archives/406885")
+
+    g.serialize(destination=ONTOLOGY_PATH, format="xml")
+    print("✅ Онтология обновлена всеми парсерами.")

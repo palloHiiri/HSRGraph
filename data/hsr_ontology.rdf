@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://example.org/hsr-ontology#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Destiny’s_Threads_Forewoven">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Prisoner_in_Deep_Confinement">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases ATK by 12%. 4-Pc: For every DoT the target enemy is afflicted with, the wearer will ignore 6% of target's DEF when dealing DMG to them. This effect is valid for a max of 3 DoTs.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/411060</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Poet_of_Mourning_Collapse">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Quantum DMG by 10%. 4-Pc: Decreases the wearer's SPD by 8%. Before entering battle, if the wearer's SPD is less than 110/95, increases the wearer's CRIT Rate by 20%/32%. This effect also applies to the wearer's memosprite.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/492444</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Path">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#Character"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Yanqing">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#hasPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Iron_Cavalry_Against_the_Scourge">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Break Effect by 16%. 4-Pc: If the wearer's Break Effect is 150% or higher, ignores 10% of the enemy target's DEF when dealing Break DMG to them. When the wearer's Break Effect is 250% or higher, the Super Break DMG they deal to enemy targets additionally ignores 15% of the targets' DEF.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/457402</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Quid_Pro_Quo">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Make_Farewells_More_Beautiful">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Life_Should_Be_Cast_to_Flames">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Birth_of_the_Self">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Evernight">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sagacity">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Pioneering">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Welt">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#hasSet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Set"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#recommendedMainStatBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#In_the_Night">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Great_Cosmic_Enterprise">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Characteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#Set"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Adversarial">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Trailblazer_(Fire)">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Cerydra">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Bronya">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Dream's_Montage">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Argenti">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Items">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Relics</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/407119</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Pioneer_Diver_of_Dead_Waters">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases DMG dealt to enemies with debuff by 12%. 4-Pc: Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s).</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/441067</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Lies_Dance_on_the_Breeze">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Day_Cosmos_Fell">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Topaz">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Thus_Burns_the_Dawn">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Time_Waits_for_No_One">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Broken_Keel">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's Effect RES by 10%. When the wearer's Effect RES is at 30% or higher, all allies' CRIT DMG increases by 10%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/415813</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Dr._Ratio">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Genius_of_Brilliant_Stars">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Quantum DMG by 10%. 4-Pc: When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407393</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Band_of_Sizzling_Thunder">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Lightning DMG by 10%. 4-Pc: When the wearer uses their Skill, increases the wearer's ATK by 20% for 1 turn(s).</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407387</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Cyrene">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Eternal_Calculus">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sushang">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Warrior_Goddess_of_Sun_and_Thunder">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: SPD increases by 6%. 4-Pc: When the wearer and their memosprite provide healing to ally targets aside from themselves, the wearer gains "Gentle Rain," which can be triggered up to 1 time per turn, lasting for 2 turns. When the wearer has "Gentle Rain," increases SPD by 6%, and increases all allies' CRIT DMG by 15%. This effect cannot be stacked.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/521518</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#recommendedSubStats">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Quantum">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Xueyi">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Belobog_of_the_Architects">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's DEF by 15%. When the wearer's Effect Hit Rate is 50% or higher, the wearer gains an extra 15% DEF.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407401</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Caverns">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Missions</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/409344</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Destruction">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Mutual_Demise">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Tier_Lists">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Cosmetics</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/409958</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Texture_of_Memories">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Rappa">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sparkle">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Good_Night_and_Sleep_Well">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Izumo_Gensei_and_Takama_Divine_Realm">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's ATK by 12%. When entering battle, if at least one other ally follows the same Path as the wearer, then the wearer's CRIT Rate increases by 12%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/448215</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Firefly">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#recommendedMainStatRope">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Final_Victor">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Simulated_Universe">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Pure Fiction</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/409149</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Wastelander_of_Banditry_Desert">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Imaginary DMG by 10%. 4-Pc: When attacking debuffed enemies, the wearer's CRIT Rate increases by 10%, and their CRIT DMG increases by 20% against Imprisoned enemies.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407396</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Arcadia_of_Woven_Dreams">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: When there are currently more or less than 4 ally targets in battle, each additional/missing ally target increases the wearer and their memosprite's DMG by 9%/12%, up to a maximum of 4/3 stacks.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/531320</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#See_You_at_the_End">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#We_Are_Wildfire">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Shattered_Home">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hook">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Collapsing_Sky">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#hasAlternativeLightCones">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Preservation">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Phainon">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Anaxa">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Forge_of_the_Kalpagni_Lantern">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's SPD by 6%. When the wearer hits an enemy target that has Fire Weakness, the wearer's Break Effect increases by 40%, lasting for 1 turn(s).</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/457405</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sweat_Now,_Cry_Less">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hanya">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Story's_Next_Page">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Firesmith_of_Lava-Forging">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increase Fire DMG by 10%. 4-Pc: Increases the wearer's Skill DMG by 12%. After unleashing Ultimate, increases the wearer's Fire DMG by 12% for the next attack.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407395</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hysilens">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Duran,_Dynasty_of_Running_Wolves">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: When allies use follow-up attacks, the wearer gains 1 stack of Merit, stacking up to 5 times. Each stack of Merit increases the DMG dealt by the wearer's follow-up attacks by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/457404</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Space_Sealing_Station">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's ATK by 12%. When the wearer's SPD reaches 120 or higher, the wearer's ATK increases by an extra 12%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407390</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Musketeer_of_Wild_Wheat">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: ATK increases by 12%. 4-Pc: The wearer's SPD increases by 6% and Basic ATK DMG increases by 10%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407384</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#World-Remaking_Deliverer">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases CRIT Rate by 8%. 4-Pc: After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by 24%, and increases all allies' DMG by 15% until the wearer's next Basic ATK or Skill.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/550761</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Brighter_Than_the_Sun">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Fermata">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#recommendedLightCone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Saber">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Messenger_Traversing_Hackerspace">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases SPD by 6%. 4-Pc: When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/415810</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Penacony,_Land_of_the_Dreams">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases wearer's Energy Regeneration Rate by 5%. Increases DMG for all other allies with the same DMG Type as the wearer by 10%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/414665</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Scent_Alone_Stays_True">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Champion_of_Streetwise_Boxing">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Physical DMG by 10%. 4-Pc: After the wearer attacks or is hit, their ATK increases by 5% for the rest of the battle. This effect can stack up to 5 time(s).</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407388</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Post-Op_Conversation">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#It’s_Showtime">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Moment_of_Victory">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Luocha">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#hasElement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sunday">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Worrisome,_Blissful">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Trailblazer_(Ice)">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Before_Dawn">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Seriousness_of_Breakfast">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Whereabouts_Should_Dreams_Rest">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Journey,_Forever_Peaceful">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Landau's_Choice">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Defense">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Huohuo">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Past_and_Future">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Jade">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Apocalyptic_Shadow">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Anomaly Arbitration</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/457411</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Jiaoqiu">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Clara">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Tribbie">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#PlanarRelics">
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#Set"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Seele">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Tingyun">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Fine_Fruit">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Pan-Cosmic_Commercial_Enterprise">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's Effect Hit Rate by 10%. Meanwhile, the wearer's ATK increases by an amount that is equal to 25% of the current Effect Hit Rate, up to a maximum of 25%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407399</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Yukong">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Nihility">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Wind">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Qingque">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Ninja_Record_-_Sound_Hunt">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Planetary_Rendezvous">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Dan_Heng">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#March_7th">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sprightly_Vonwacq">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407398</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Past_Self_in_Mirror">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Epoch_Etched_in_Golden_Blood">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#What_Is_Real">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Forever_Victual">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#In_the_Name_of_the_World">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Unreachable_Side">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Mydei">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Arlan">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#To_Evernight's_Stars">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Abundance">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Dreamville_Adventure">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Loop">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#recommendedTeam">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Team"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Ruan_Mei">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Baptism_of_Pure_Thought">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#This_Is_Me!">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Harmony">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Inherently_Unjust_Destiny">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Bosses">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Light Cones</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/409817</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Kafka">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#recommendedMainStatFeet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Passerby_of_Wandering_Cloud">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Outgoing Healing by 10%. 4-Pc: At the start of the battle, immediately regenerates 1 Skill Point.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407383</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#For_Tomorrow's_Journey">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#recommendedMainStatSphere">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Dance!_Dance!_Dance!">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Element">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#Enemies"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Acheron">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#The_Wind-Soaring_Valorous">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: ATK increases by 12%. 4-Pc: Increases the wearer's CRIT Rate by 6%. After the wearer uses a follow-up attack, increases the DMG dealt by their Ultimate by 30%, lasting for 1 turn(s).</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/457403</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Scholar_Lost_in_Erudition">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases CRIT Rate by 8%. 4-Pc: Increases DMG dealt by Ultimate and Skill by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/478668</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#MainCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#In_Pursuit_of_the_Wind">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Earthly_Escapade">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Lingsha">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Woof!_Walk_Time!">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Herta">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Speed">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#A_Secret_Vow">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Memory's_Curtain_Never_Falls">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Wavestrider_Captain">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: CRIT DMG increases by 16%. 4-Pc: When the wearer is the target of another ally target's ability, gains 1 stack of "Help," stacking up to 2 times. When using Ultimate, if the unit possesses 2 stacks of "Help," consumes all "Help" and increases the wearer's ATK by 48%, lasting 1 turn.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/521519</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Trend_of_the_Universal_Market">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hunter_of_Glacial_Forest">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Ice DMG by 10%. 4-Pc: After the wearer uses their Ultimate, their CRIT DMG increases by 25% for 2 turn(s).</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407385</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Into_the_Unreachable_Veil">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#But_the_Battle_Isn't_Over">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hell_Where_Ideals_Burn">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Memories_of_the_Past">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#lightConeHasPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Warmth_Shortens_Cold_Nights">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Jingliu">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Multiplication">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Luka">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Revelry_by_the_Sea">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's ATK by 12%. When the wearer's ATK is higher than or equal to 2,400/3,600, increases the DoT DMG dealt by 12%/24%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/531331</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#EnergyRegen">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Guinaifen">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Though_Worlds_Apart">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Make_the_World_Clamor">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Gepard">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Incessant_Rain">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Self-Enshrouded_Recluse">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Shield Effect by 10%. 4-Pc: Increases Shield Effect provided by the wearer by 12%. When an ally target has a Shield provided by the wearer, their CRIT DMG increases by 15%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/550762</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#If_Time_Were_a_Flower">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hunt">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Gallagher">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Watchmaker,_Master_of_Dream_Machinations">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Break Effect by 16%. 4-Pc: When the wearer uses their Ultimate on an ally, Break Effect for all allies increases by 30% for 2 turn(s). This effect cannot be stacked.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/441068</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Giant_Tree_of_Rapt_Brooding">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's SPD by 6%. When the wearer's Speed is 135/180 or higher, increases the wearer and their memosprite's Outgoing Healing by 12%/20%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/499797</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Feixiao">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Day_One_of_My_New_Life">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Fly_Into_a_Pink_Tomorrow">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#EffectHitRate">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Celestial_Differentiator">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's CRIT DMG by 16%. When the wearer's current CRIT DMG reaches 120% or higher, after entering battle, the wearer's CRIT Rate increases by 60% until the end of their first attack.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407400</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Poised_to_Bloom">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Mediation">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Boothill">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Meshing_Cogs">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#I_Venture_Forth_to_Hunt">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#News">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Characters</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/404257</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hey,_Over_Here">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Longevous_Disciple">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Max HP by 12%. 4-Pc: When the wearer is hit or has their HP consumed by an ally, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/415802</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Carve_the_Moon,_Weave_the_Clouds">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#After_the_Charmony_Fall">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Cruising_in_the_Stellar_Sea">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Amber">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sailing_Towards_A_Second_Life">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Tips_and_Tricks">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Enemies</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/406109</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Time_Woven_into_Gold">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Dance_at_Sunset">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#BreakEffect">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Along_the_Passing_Shore">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Concert_for_Two">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Eagle_of_Twilight_Line">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Wind DMG by 10%. 4-Pc: After the wearer uses their Ultimate, their action is Advanced Forward by 25%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407394</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Warps">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Events</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/408381</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sacerdos'_Relived_Ordeal">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases SPD by 6%. 4-Pc: When using Skill or Ultimate on one ally target, increases the ability-using target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/477932</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#HP">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#hasWeakness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Enemies"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#We_Will_Meet_Again">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#The_Ashblazing_Grand_Duke">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases follow-up attack DMG by 20%. 4-Pc: When the wearer uses follow-up attacks against the target enemy, increase the wearer's ATK by 6% for every time the follow-up attack deals DMG. This effect can stack for a maximum of 8 times and lasts for 3 turns. This effect is removed the next time the wearer uses a follow-up attack.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/417831</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Trailblazer">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#The_Wondrous_BananAmusement_Park">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's CRIT DMG by 16%. When a target summoned by the wearer is on the field, CRIT DMG additionally increases by 32%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/470754</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Lushaka,_the_Sunken_Seas">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increase the ATK of the first character in the team lineup by 12%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/470753</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Rutilant_Arena">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, the wearer's Basic ATK and Skill DMG increase by 20%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/415811</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Serval">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Himeko">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Shared_Feeling">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Blade">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Shadowed_by_Night">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#hasSubCharacteristics">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <rdfs:range rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Geniuses'_Repose">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#DEF">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#SubCharacteristic">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#A_Thankless_Coronation">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Archer">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Trailblazer_(Imaginary)">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Thief_of_Shooting_Meteor">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases Break Effect by 16%. 4-Pc: Increases the wearer's Break Effect by 16%. When the wearer inflicts Weakness Break on an enemy, regenerates 3 Energy.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407389</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Only_Silence_Remains">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Jing_Yuan">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#She_Already_Shut_Her_Eyes">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Guard_of_Wuthering_Snow">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Reduces DMG taken by 8%. 4-Pc: At the beginning of the turn, if the wearer's HP is equal to or less than 50%, restores HP equal to 8% of their Max HP and regenerates 5 energy.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407392</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Talia:_Kingdom_of_Banditry">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's Break Effect by 16%. When the wearer's SPD reaches 145 or higher, the wearer's Break effect increases by an extra 20%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407397</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Lightning">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hidden_Shadow">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Imaginary">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Arrows">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Long_Road_Leads_Home">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Lynx">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Cipher">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Misha">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Knight_of_Purity_Palace">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases DEF by 15%. 4-Pc: Increases the max DMG that can be absorbed by the Shield created by the wearer by 20%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407386</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Yunli">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#March_7th_(Imaginary)">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Solitary_Healing">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Pela">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Ice"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Return_to_Darkness">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Chorus">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Maps">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>Forgotten Hall</rdfs:comment>
+    <ns1:sourceURL>/games/Honkai-Star-Rail/archives/409757</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#DEF_percent">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Aventurine">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Fugue">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Before_the_Tutorial_Mission_Starts">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Eyes_of_the_Prey">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Passkey">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Fleet_of_the_Ageless">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's Max HP by 12%. When the wearer's SPD reaches 120 or higher, all allies' ATK increases by 8%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407391</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#A_Grounded_Ascent">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Physical">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Flowing_Nightglow">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Moze">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#LightCone">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Data_Bank">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Echoes_of_the_Coffin">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Fu_Xuan">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Flames_Afar">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hyacine">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#HP_percent">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Asta">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Fire"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#An_Instant_Before_A_Gaze">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Boundless_Choreo">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#CavernRelics">
+    <rdfs:subClassOf rdf:resource="http://example.org/hsr-ontology#Set"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Firmament_Frontline_Glamoth">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/415943</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Cornucopia">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Permansor_Terrae">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Preservation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Character">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#I_Shall_Be_My_Own_Sword">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Subscribe_for_More!">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Something_Irreplaceable">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Victory_In_a_Blink">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Erudition">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Silver_Wolf">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Void">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Those_Many_Springs">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Enemies">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sigonia,_the_Unclaimed_Desolation">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's CRIT Rate by 4%. When an enemy target gets defeated, the wearer's CRIT DMG increases by 4%, stacking up to 10 time(s).</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/448214</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Black_Swan">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Swordplay">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Nowhere_to_Run">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Night_on_the_Milky_Way">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Hero_of_Triumphant_Song">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#CavernRelics"/>
+    <rdfs:comment>2-Pc: Increases ATK by 12%. 4-Pc: While the wearer's memosprite is on the field, increases the wearer's SPD by 6%. When the wearer's memosprite attacks, increases the wearer and memosprite's CRIT DMG by 30% for 2 turns.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/492445</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Perfect_Timing">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Robin">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Harmony"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Reforged_Remembrance">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Bone_Collection's_Serene_Demesne">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's Max HP by 12%. When the wearer's Max HP is 5000 or higher, increases the wearer's and their memosprite's CRIT DMG by 28%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/499796</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Inert_Salsotto">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Set"/>
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#PlanarRelics"/>
+    <rdfs:comment>2-Pc: Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the wearer's Ultimate and follow-up attack DMG increases by 15%.</rdfs:comment>
+    <ns1:sourceURL>https://game8.co/games/Honkai-Star-Rail/archives/407402</ns1:sourceURL>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Natasha">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Physical"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Under_the_Blue_Sky">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Holiday_Thermae_Escapade">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Patience_Is_All_You_Need">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Yet_Hope_Is_Priceless">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Geniuses'_Greetings">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Reminiscence">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Imbibitor_Lunae">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Imaginary"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Bailu">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Resolution_Shines_As_Pearls_of_Sweat">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Long_May_Rainbows_Adorn_the_Sky">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Darting_Arrow">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#On_the_Fall_of_an_Aeon">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Why_Does_the_Ocean_Sing">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Flower_Remembers">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sampo">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Wind"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Nihility"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#ATK">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Remembrance">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Path"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Castorice">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Quantum"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Aglaea">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Character"/>
+    <ns1:hasElement rdf:resource="http://example.org/hsr-ontology#Lightning"/>
+    <ns1:hasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Today_Is_Another_Peaceful_Day">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Moles_Welcome_You">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Ninjutsu_Inscription_-_Dazzling_Evilbreaker">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#ATK_percent">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#CritRate">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Sleep_Like_the_Dead">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#River_Flows_in_Spring">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Hunt"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Night_of_Fright">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Shadowburn">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#This_Love,_Forever">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Remembrance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Ice">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#EffectRES">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Fire">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Flame_of_Blood,_Blaze_My_Path">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#A_Dream_Scented_in_Wheat">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Erudition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Indelible_Promise">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#A_Trail_of_Bygone_Blood">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Destruction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Unto_Tomorrow's_Morrow">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#LightCone"/>
+    <ns1:lightConeHasPath rdf:resource="http://example.org/hsr-ontology#Abundance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#CritDMG">
+    <rdf:type rdf:resource="http://example.org/hsr-ontology#Characteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Set">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/hsr-ontology#Team">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+</rdf:RDF>
