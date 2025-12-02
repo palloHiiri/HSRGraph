@@ -1,8 +1,10 @@
 """
-Персонажи, покрывающие слабости Stormbringer.
+Персонажи, покрывающие слабости Stormbringer и рекоммендуемые артефакты для них.
+Выбирает отряд из четырех подходящих персонажей.
 """
 
 from rdflib import Graph, Namespace, RDFS
+import random
 
 HSR = Namespace("http://example.org/hsr-ontology#")
 ONTOLOGY_PATH = "data/hsr_ontology.rdf"
@@ -25,28 +27,81 @@ def main():
 
     boss_uri = HSR[BOSS]
 
-    q = f"""
+    q_support = f"""
     PREFIX hsr: <http://example.org/hsr-ontology#>
-    SELECT DISTINCT ?character ?weakElem ?recommendedLC
+    SELECT DISTINCT ?character ?weakElem ?path ?cavernRelic ?planarRelic
     WHERE {{
       <{boss_uri}> hsr:hasWeakness ?weakElem .
       ?character a hsr:Character .
       ?character hsr:hasElement ?weakElem .
-      OPTIONAL {{ ?character hsr:recommendedLightCone ?recommendedLC. }}
+      ?character hsr:hasPath ?path .
+      FILTER (?path IN (hsr:Abundance, hsr:Preservation))
+      OPTIONAL {{ ?character hsr:hasCavernRelic ?cavernRelic. }}
+      OPTIONAL {{ ?character hsr:hasPlanarRelic ?planarRelic. }}
     }}
-    ORDER BY ?character
     """
-    res = g.query(q)
-    print("character_label | weakness_label |recommendedLC_label")
+    
+    q_harmony = f"""
+    PREFIX hsr: <http://example.org/hsr-ontology#>
+    SELECT DISTINCT ?character ?weakElem ?path ?cavernRelic ?planarRelic
+    WHERE {{
+      <{boss_uri}> hsr:hasWeakness ?weakElem .
+      ?character a hsr:Character .
+      ?character hsr:hasElement ?weakElem .
+      ?character hsr:hasPath hsr:Harmony .
+      OPTIONAL {{ ?character hsr:hasCavernRelic ?cavernRelic. }}
+      OPTIONAL {{ ?character hsr:hasPlanarRelic ?planarRelic. }}
+    }}
+    """
+    
+    q_others = f"""
+    PREFIX hsr: <http://example.org/hsr-ontology#>
+    SELECT DISTINCT ?character ?weakElem ?path ?cavernRelic ?planarRelic
+    WHERE {{
+      <{boss_uri}> hsr:hasWeakness ?weakElem .
+      ?character a hsr:Character .
+      ?character hsr:hasElement ?weakElem .
+      ?character hsr:hasPath ?path .
+      OPTIONAL {{ ?character hsr:hasCavernRelic ?cavernRelic. }}
+      OPTIONAL {{ ?character hsr:hasPlanarRelic ?planarRelic. }}
+    }}
+    """
+    
+    support_list = list(g.query(q_support))
+    harmony_list = list(g.query(q_harmony))
+    others_list = list(g.query(q_others))
+    
+    selected = []
+    selected_uris = set()
+    
+    if support_list:
+        choice = random.choice(support_list)
+        selected.append(choice)
+        selected_uris.add(choice.character)
+    
+    if harmony_list:
+        available_harmony = [c for c in harmony_list if c.character not in selected_uris]
+        if available_harmony:
+            choice = random.choice(available_harmony)
+            selected.append(choice)
+            selected_uris.add(choice.character)
+    
+    available_others = [c for c in others_list if c.character not in selected_uris]
+    random.shuffle(available_others)
+    for char in available_others[:2]:
+        selected.append(char)
+        selected_uris.add(char.character)
+    
+    print("character_label |cavernRelic_label | planarRelic_label")
     print("-" * 140)
-    for row in res:
+    for row in selected:
         char = row.character
-        weak = row.weakElem
-        lc = row.recommendedLC if hasattr(row, "recommendedLC") else None
+        cavern = row.cavernRelic if hasattr(row, "cavernRelic") else None
+        planar = row.planarRelic if hasattr(row, "planarRelic") else None
         print(
             f"{pretty_name(g, char)} | "
-            f"{pretty_name(g, weak)} | "
-            f"{pretty_name(g, lc) if lc is not None else '-'}"
+            f"{pretty_name(g, cavern) if cavern is not None else '-'} | "
+            f"{pretty_name(g, planar) if planar is not None else '-'}"
         )
 
 

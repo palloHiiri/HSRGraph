@@ -94,11 +94,10 @@ def _parse_table(graph: Graph, table: Tag, enemy_type_label: str):
         for (wtext, whref) in weaknesses:
             elem_norm = normalize(wtext)
             elem_uri = HSR[elem_norm]
-
-            graph.add((elem_uri, RDF.type, RDFS.Class))
-            graph.add((elem_uri, RDFS.subClassOf, HSR.Element))
+            
             if whref:
                 graph.add((elem_uri, HSR.sourceURL, Literal(whref)))
+                graph.add((elem_uri, RDFS.label, Literal(wtext)))
 
             graph.add((enemy_uri, HSR.hasWeakness, elem_uri))
 

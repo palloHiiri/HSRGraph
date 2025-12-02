@@ -1,6 +1,6 @@
 """
-Подбор минимального состава отряда против Doomsday Beast при условии уязвимости к элементу Wind.
-Возвращает до 4 персонажей с элементом Wind.
+Подбор возможных персонажей против Doomsday Beast при условии уязвимости к элементу Wind, а также рекомендуемые световые конусы.
+Возвращает до 4 персонажей с элементом Wind, один из которых следует пути Abundance или Preservation.
 """
 from rdflib import Graph, Namespace, RDFS, Literal
 
@@ -34,24 +34,52 @@ def main():
     if elem_uri not in boss_weaknesses:
         print(f"Warning: boss {BOSS} does not list {ELEMENT} as a weakness in the ontology (found: {', '.join(pretty_name(g,x) for x in boss_weaknesses) or 'none'}).")
 
-    q = f"""
+    q_support = f"""
     PREFIX hsr: <http://example.org/hsr-ontology#>
-    SELECT DISTINCT ?character ?recommendedLC
+    SELECT DISTINCT ?character ?path ?recommendedLC
     WHERE {{
       ?character a hsr:Character .
       ?character hsr:hasElement <{elem_uri}> .
+      ?character hsr:hasPath ?path .
+      FILTER (?path IN (hsr:Abundance, hsr:Preservation))
       OPTIONAL {{ ?character hsr:recommendedLightCone ?recommendedLC. }}
     }}
     ORDER BY ?character
-    LIMIT {LIMIT}
+    LIMIT 1
     """
-    res = g.query(q)
-    print("character_label | recommendedLC_label")
+
+    q_others = f"""
+    PREFIX hsr: <http://example.org/hsr-ontology#>
+    SELECT DISTINCT ?character ?path ?recommendedLC
+    WHERE {{
+      ?character a hsr:Character .
+      ?character hsr:hasElement <{elem_uri}> .
+      ?character hsr:hasPath ?path .
+      FILTER (?path NOT IN (hsr:Abundance, hsr:Preservation))
+      OPTIONAL {{ ?character hsr:recommendedLightCone ?recommendedLC. }}
+    }}
+    ORDER BY ?character
+    LIMIT 3
+    """
+    
+    print("character_label | path_label | recommendedLC_label")
     print("-" * 100)
-    for row in res:
+    
+    # Get support character
+    res_support = g.query(q_support)
+    for row in res_support:
         char = row.character
+        path = row.path if hasattr(row, "path") else None
         lc = row.recommendedLC if hasattr(row, "recommendedLC") else None
-        print(f"{pretty_name(g, char)} | {pretty_name(g, lc) if lc is not None else '-'}")
+        print(f"{pretty_name(g, char)} | {pretty_name(g, path) if path else '-'} | {pretty_name(g, lc) if lc is not None else '-'}")
+    
+    # Get other characters
+    res_others = g.query(q_others)
+    for row in res_others:
+        char = row.character
+        path = row.path if hasattr(row, "path") else None
+        lc = row.recommendedLC if hasattr(row, "recommendedLC") else None
+        print(f"{pretty_name(g, char)} | {pretty_name(g, path) if path else '-'} | {pretty_name(g, lc) if lc is not None else '-'}")
 
 
 if __name__ == "__main__":
