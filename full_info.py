@@ -84,8 +84,6 @@ def print_summary(summary):
         print(f"  Планарные реликвии: {', '.join(plan)}")
     else:
         print("  Планарные реликвии: —")
-
-    print("===============================================")
     print()
 
 def summarize_enemy(graph, enemy_uri):
@@ -108,7 +106,6 @@ def print_enemy_summary(summary):
         print(f"  Слабости (hasWeakness): {', '.join(weaks)}")
     else:
         print("  Слабости (hasWeakness): —")
-    print("===============================================")
     print()
 
 def find_character_uri_by_name(graph, name):
