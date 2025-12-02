@@ -1,38 +1,37 @@
 from rdflib import Graph, Namespace, RDF, RDFS, OWL
+import re
 
 HSR = Namespace("http://example.org/hsr-ontology#")
 
 def normalize(term):
-    return term.replace("The ", "").replace(" ", "_")
+    if not term:
+        return ""
+    s = term.replace("The ", "").strip()
+    s = s.replace("%", "_percent")
+    s = re.sub(r'[^0-9A-Za-z_]', '_', s)
+    s = re.sub(r'_+', '_', s)
+    return s.strip('_')
 
 def build_ontology(path):
     g = Graph()
     g.bind("hsr", HSR)
 
-    base_classes = ["Character", "Enemies", "LightCone", "Path", "Element", "Set", "Characteristic", "Team"]
+    base_classes = ["Character", "Enemies", "LightCone", "Path", "Element", "Set", "Characteristic"]
     for cls_name in base_classes:
         g.add((HSR[cls_name], RDF.type, RDFS.Class))
 
-    # Element — подкласс LightCone, Character и Enemies
+    g.add((HSR.CavernRelics, RDF.type, RDFS.Class))
+    g.add((HSR.PlanarRelics, RDF.type, RDFS.Class))
+    g.add((HSR.CavernRelics, RDFS.subClassOf, HSR.Set))
+    g.add((HSR.PlanarRelics, RDFS.subClassOf, HSR.Set))
+
+    g.add((HSR.Characteristic, RDF.type, RDFS.Class))
+
     g.add((HSR.Element, RDFS.subClassOf, HSR.LightCone))
     g.add((HSR.Element, RDFS.subClassOf, HSR.Character))
     g.add((HSR.Element, RDFS.subClassOf, HSR.Enemies))
-
-    # Path — подкласс и LightCone, и Character (у конуса есть только путь как сабкласс; у персонажа тоже должен быть сабкласс путь)
     g.add((HSR.Path, RDFS.subClassOf, HSR.LightCone))
     g.add((HSR.Path, RDFS.subClassOf, HSR.Character))
-
-    # Characteristic — подкласс артефакта Set (убрал наследование от LightCone)
-    g.add((HSR.Characteristic, RDFS.subClassOf, HSR.Set))
-
-    # Добавить два сабкласса характеристик: MainCharacteristic и SubCharacteristic
-    g.add((HSR.MainCharacteristic, RDF.type, RDFS.Class))
-    g.add((HSR.SubCharacteristic, RDF.type, RDFS.Class))
-    g.add((HSR.MainCharacteristic, RDFS.subClassOf, HSR.Characteristic))
-    g.add((HSR.SubCharacteristic, RDFS.subClassOf, HSR.Characteristic))
-
-    g.add((HSR.CavernRelics, RDFS.subClassOf, HSR.Set))
-    g.add((HSR.PlanarRelics, RDFS.subClassOf, HSR.Set))
 
     pathes = [
         "The Preservation", "The Hunt", "The Harmony", "The Abundance",
@@ -50,30 +49,37 @@ def build_ontology(path):
         "BreakEffect", "EffectHitRate", "EffectRES", "EnergyRegen"
     ]
     for c in characteristics:
-        g.add((HSR[c], RDF.type, HSR.Characteristic))
+        g.add((HSR[normalize(c)], RDF.type, HSR.Characteristic))
 
     properties = {
         "hasPath": (HSR.Character, HSR.Path),
         "hasElement": (HSR.Character, HSR.Element),
-        "hasSet": (HSR.Character, HSR.Set),
+        "hasCavernRelic": (HSR.Character, HSR.CavernRelics),
+        "hasPlanarRelic": (HSR.Character, HSR.PlanarRelics),
         "hasSubCharacteristics": (HSR.Character, HSR.Characteristic),
         "recommendedLightCone": (HSR.Character, HSR.LightCone),
         "hasWeakness": (HSR.Enemies, HSR.Element),
         "recommendedSubStats": (HSR.Character, HSR.Characteristic),
-        "recommendedTeam": (HSR.Character, HSR.Team),
         "recommendedMainStatBody": (HSR.Character, HSR.Characteristic),
         "recommendedMainStatFeet": (HSR.Character, HSR.Characteristic),
         "recommendedMainStatSphere": (HSR.Character, HSR.Characteristic),
         "recommendedMainStatRope": (HSR.Character, HSR.Characteristic),
         "lightConeHasPath": (HSR.LightCone, HSR.Path),
         "hasAlternativeLightCones": (HSR.Character, HSR.LightCone),
+        "sourceURL": (HSR.Set, RDFS.Literal),  
     }
 
     for prop_name, (domain, range_) in properties.items():
         prop_uri = HSR[prop_name]
-        g.add((prop_uri, RDF.type, OWL.ObjectProperty))
-        g.add((prop_uri, RDFS.domain, domain))
-        g.add((prop_uri, RDFS.range, range_))
+      
+        if prop_name == "sourceURL":
+            g.add((prop_uri, RDF.type, OWL.DatatypeProperty))
+            g.add((prop_uri, RDFS.domain, domain))
+          
+        else:
+            g.add((prop_uri, RDF.type, OWL.ObjectProperty))
+            g.add((prop_uri, RDFS.domain, domain))
+            g.add((prop_uri, RDFS.range, range_))
 
     g.serialize(destination=path, format="xml")
-    print("✅ Онтология создана.")
+    print("Онтология создана.")
