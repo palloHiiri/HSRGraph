@@ -36,14 +36,27 @@ def train_graph_embeddings(rdf_file_path: str,
 
     print("2. Подготовка данных для PyKEEN...")
     triples = []
+    entity_types = {}
     for s, p, o in g:
-        triples.append([str(s), str(p), str(o)])
+        s_str, p_str, o_str = str(s), str(p), str(o)
+        triples.append([s_str, p_str, o_str])
+        if p_str == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type":
+            entity_types.setdefault(s_str, set()).add(o_str)
     triples = np.array(triples, dtype=str)
 
     tf = TriplesFactory.from_labeled_triples(triples)
     training, testing = tf.split([0.8, 0.2], random_state=42)
     print(f"   Сущностей: {len(tf.entity_to_id)}, отношений: {len(tf.relation_to_id)}")
 
+    if torch.cuda.is_available():
+        device = "cuda"
+        print("3. Обучение модели TransE (устройство: CUDA/NVIDIA)...")
+    elif torch_directml is not None:
+        device = torch_directml.device()
+        print("3. Обучение модели TransE (устройство: DirectML/AMD-Intel)...")
+    else:
+        device = "cpu"
+        print("3. Обучение модели TransE (устройство: CPU)...")
 
     os.makedirs(save_dir, exist_ok=True)
 
@@ -64,15 +77,16 @@ def train_graph_embeddings(rdf_file_path: str,
     tf_path = os.path.join(save_dir, "triples_factory.pkl")
     with open(tf_path, "wb") as f:
         pickle.dump(tf, f)
+    types_path = os.path.join(save_dir, "entity_types.pkl")
+    with open(types_path, "wb") as f:
+        pickle.dump(entity_types, f)
     print(f"4. Результаты сохранены в папку '{save_dir}'")
 
-    return result.model, tf
+    return result.model, tf, entity_types
 
 
 def load_saved_model(directory: str = "hsr_embedding_results"):
-    """
-    Загружает сохранённую модель TransE и TriplesFactory.
-    """
+
     from pykeen.models import TransE as TransEModel
     
     print(f"Загрузка модели из {directory}...")
@@ -82,14 +96,17 @@ def load_saved_model(directory: str = "hsr_embedding_results"):
     tf_path = os.path.join(directory, "triples_factory.pkl")
     with open(tf_path, "rb") as f:
         tf = pickle.load(f)
+    types_path = os.path.join(directory, "entity_types.pkl")
+    entity_types = {}
+    if os.path.exists(types_path):
+        with open(types_path, "rb") as f:
+            entity_types = pickle.load(f)
     
     print("Модель загружена успешно.")
-    return model, tf
+    return model, tf, entity_types
 
 def get_entity_embedding(entity_uri: str, model, tf):
-    """
-    Получает эмбеддинг для сущности по её URI.
-    """
+
     try:
         entity_id = tf.entity_to_id[entity_uri]
         embedding = model.entity_representations[0](indices=torch.tensor([entity_id])).detach().numpy()[0]
@@ -100,9 +117,7 @@ def get_entity_embedding(entity_uri: str, model, tf):
 
 
 def get_relation_embedding(relation_uri: str, model, tf):
-    """
-    Получает эмбеддинг для отношения по его URI.
-    """
+
     try:
         relation_id = tf.relation_to_id[relation_uri]
         embedding = model.relation_representations[0](indices=torch.tensor([relation_id])).detach().numpy()[0]
@@ -112,10 +127,8 @@ def get_relation_embedding(relation_uri: str, model, tf):
         return None
 
 
-def find_similar_entities(entity_uri: str, model, tf, top_k: int = 5):
-    """
-    Находит top_k похожих сущностей по косинусному расстоянию.
-    """
+def find_similar_entities(entity_uri: str, model, tf, entity_types: dict | None = None, top_k: int = 5):
+
     from sklearn.metrics.pairwise import cosine_similarity
     
     entity_embedding = get_entity_embedding(entity_uri, model, tf)
@@ -127,11 +140,32 @@ def find_similar_entities(entity_uri: str, model, tf, top_k: int = 5):
     
     similarities = cosine_similarity([entity_embedding], all_embeddings)[0]
     
-    top_indices = np.argsort(similarities)[::-1][1:top_k+1]
+    top_indices = np.argsort(similarities)[::-1][1:]
     
     results = []
     id_to_entity = {v: k for k, v in tf.entity_to_id.items()}
-    for idx in top_indices:
+    
+    filtered = []
+    if entity_types and entity_uri in entity_types:
+        target_types = entity_types.get(entity_uri, set())
+        for idx in top_indices:
+            uri = id_to_entity[idx]
+            types = entity_types.get(uri, set())
+            if target_types & types:
+                filtered.append(idx)
+            if len(filtered) >= top_k:
+                break
+    else:
+        filtered = list(top_indices[:top_k])
+    
+    i = 0
+    while len(filtered) < top_k and i < len(top_indices):
+        idx = top_indices[i]
+        if idx not in filtered:
+            filtered.append(idx)
+        i += 1
+    
+    for idx in filtered[:top_k]:
         similar_entity = id_to_entity[idx]
         similarity = similarities[idx]
         results.append((similar_entity, similarity))
@@ -143,9 +177,6 @@ def reduce_embeddings(embeddings,
                       method: str = "tsne",
                       random_state: int = 42,
                       perplexity: int = 30):
-    """
-    Сжать эмбеддинги в 2D с помощью t-SNE или PCA.
-    """
     if method == "pca":
         if PCA is None:
             raise ImportError("Скрипт запущен без scikit-learn. Установи scikit-learn для PCA.")
@@ -169,10 +200,7 @@ def reduce_embeddings(embeddings,
 
 
 def collect_all_embeddings(model, tf):
-    """
-    Собирает все эмбеддинги сущностей из модели.
-    Возвращает: (embeddings, labels)
-    """
+
     all_entity_ids = torch.arange(len(tf.entity_to_id))
     embeddings = model.entity_representations[0](indices=all_entity_ids).detach().numpy()
     
@@ -276,10 +304,10 @@ def main():
     
     if os.path.exists(save_dir) and os.path.exists(os.path.join(save_dir, "model.pkl")):
         print(f"✓ Найдена сохранённая модель в {save_dir}")
-        model, tf = load_saved_model(save_dir)
+        model, tf, entity_types = load_saved_model(save_dir)
     else:
         print(f"\n→ Обученная модель не найдена, начинаю обучение...")
-        model, tf = train_graph_embeddings(rdf_file, save_dir)
+        model, tf, entity_types = train_graph_embeddings(rdf_file, save_dir)
     
     print("\n" + "=" * 60)
     print("ДЕМОНСТРАЦИЯ ВОЗМОЖНОСТЕЙ")
@@ -294,7 +322,7 @@ def main():
         entity_name = entity.split("#")[-1]
         print(f"\n→ Сущность: {entity_name}")
         
-        similar = find_similar_entities(entity, model, tf, top_k=3)
+        similar = find_similar_entities(entity, model, tf, entity_types=entity_types, top_k=3)
         if similar:
             print("  Похожие сущности:")
             for sim_entity, similarity in similar:
