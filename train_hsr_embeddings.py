@@ -7,6 +7,7 @@ import torch
 from pykeen.models import TransE
 from pykeen.pipeline import pipeline
 from pykeen.triples import TriplesFactory
+import json
 
 try:
     import torch_directml
@@ -29,12 +30,9 @@ except ImportError:
 def train_graph_embeddings(rdf_file_path: str,
                            save_dir: str = "hsr_embedding_results"):
 
-    print(f"1. Загрузка графа из {rdf_file_path}...")
     g = rdflib.Graph()
     g.parse(rdf_file_path, format="xml")
-    print(f"   Загружено триплетов: {len(g)}")
 
-    print("2. Подготовка данных для PyKEEN...")
     triples = []
     entity_types = {}
     for s, p, o in g:
@@ -46,31 +44,25 @@ def train_graph_embeddings(rdf_file_path: str,
 
     tf = TriplesFactory.from_labeled_triples(triples)
     training, testing = tf.split([0.8, 0.2], random_state=42)
-    print(f"   Сущностей: {len(tf.entity_to_id)}, отношений: {len(tf.relation_to_id)}")
 
     if torch.cuda.is_available():
         device = "cuda"
-        print("3. Обучение модели TransE (устройство: CUDA/NVIDIA)...")
     elif torch_directml is not None:
         device = torch_directml.device()
-        print("3. Обучение модели TransE (устройство: DirectML/AMD-Intel)...")
     else:
         device = "cpu"
-        print("3. Обучение модели TransE (устройство: CPU)...")
 
     os.makedirs(save_dir, exist_ok=True)
 
     result = pipeline(
         training=training,
         testing=testing,
-        model="TransE",
-        model_kwargs=dict(embedding_dim=50),     
-        training_kwargs=dict(num_epochs=50),     
+        model="DistMult",
+        model_kwargs=dict(embedding_dim=100),     
+        training_kwargs=dict(num_epochs=400),     
         random_seed=42,
         device=device,
     )
-
-    print("   Обучение завершено.")
 
     result.save_to_directory(save_dir)
 
@@ -80,16 +72,11 @@ def train_graph_embeddings(rdf_file_path: str,
     types_path = os.path.join(save_dir, "entity_types.pkl")
     with open(types_path, "wb") as f:
         pickle.dump(entity_types, f)
-    print(f"4. Результаты сохранены в папку '{save_dir}'")
 
     return result.model, tf, entity_types
 
 
 def load_saved_model(directory: str = "hsr_embedding_results"):
-
-    from pykeen.models import TransE as TransEModel
-    
-    print(f"Загрузка модели из {directory}...")
     
     model = TransEModel.load(os.path.join(directory, "model.pkl"))
     
@@ -102,7 +89,6 @@ def load_saved_model(directory: str = "hsr_embedding_results"):
         with open(types_path, "rb") as f:
             entity_types = pickle.load(f)
     
-    print("Модель загружена успешно.")
     return model, tf, entity_types
 
 def get_entity_embedding(entity_uri: str, model, tf):
@@ -236,7 +222,6 @@ def plot_embeddings_2d(points_2d,
 
     if save_path:
         plt.savefig(save_path, dpi=200)
-        print(f"График сохранён в {save_path}")
     else:
         plt.show()
 
@@ -250,7 +235,6 @@ def visualize_embeddings(model: TransE,
                          max_points: int = 1200,
                          random_state: int = 42):
 
-    print("5. Подготовка данных для визуализации...")
     embeddings, labels = collect_all_embeddings(model, triples_factory)
 
     if max_points and len(embeddings) > max_points:
@@ -258,12 +242,7 @@ def visualize_embeddings(model: TransE,
         indices = rng.choice(len(embeddings), size=max_points, replace=False)
         embeddings = embeddings[indices]
         labels = [labels[i] for i in indices]
-        print(f"   Всего сущностей: {len(triples_factory.entity_to_id)}, "
-              f"визуализируем случайные {len(labels)}.")
-    else:
-        print(f"   Всего сущностей: {len(labels)}.")
 
-    print(f"   Снижение размерности методом {method}...")
     points_2d = reduce_embeddings(embeddings, method=method, perplexity=perplexity)
 
     plot_embeddings_2d(
@@ -291,47 +270,104 @@ def find_rdf_file():
 def main():
     save_dir = "hsr_embedding_results"
     
-    print("=" * 60)
-    print("HSR ONTOLOGY EMBEDDINGS TRAINER")
-    print("=" * 60)
-    
     try:
         rdf_file = find_rdf_file()
-        print(f"\n✓ Найден RDF файл: {rdf_file}")
     except FileNotFoundError as e:
-        print(f"\n✗ Ошибка: {e}")
         return
     
     if os.path.exists(save_dir) and os.path.exists(os.path.join(save_dir, "model.pkl")):
-        print(f"✓ Найдена сохранённая модель в {save_dir}")
         model, tf, entity_types = load_saved_model(save_dir)
     else:
-        print(f"\n→ Обученная модель не найдена, начинаю обучение...")
         model, tf, entity_types = train_graph_embeddings(rdf_file, save_dir)
+        print("Обучение завершено.")
     
-    print("\n" + "=" * 60)
-    print("ДЕМОНСТРАЦИЯ ВОЗМОЖНОСТЕЙ")
-    print("=" * 60)
-    
-    id_to_entity = {v: k for k, v in tf.entity_to_id.items()}
-    entity_list = list(id_to_entity.values())
-    
-    demo_entities = [e for e in entity_list if "http://example.org/hsr-ontology#" in e][:5]
-    
-    for entity in demo_entities:
-        entity_name = entity.split("#")[-1]
-        print(f"\n→ Сущность: {entity_name}")
+    results_path = os.path.join(save_dir, "results.json")
+    if os.path.exists(results_path):
+        with open(results_path, "r") as f:
+            metrics = json.load(f)
         
-        similar = find_similar_entities(entity, model, tf, entity_types=entity_types, top_k=3)
-        if similar:
-            print("  Похожие сущности:")
-            for sim_entity, similarity in similar:
-                sim_name = sim_entity.split("#")[-1]
-                print(f"    • {sim_name}: {similarity:.4f}")
+        print("\n" + "=" * 60)
+        print("МЕТРИКИ КАЧЕСТВА МОДЕЛИ")
+        print("=" * 60)
+        
+        metrics_data = metrics.get("metrics", {}).get("both", {}).get("realistic", {})
+        mr = metrics_data.get("arithmetic_mean_rank")
+        mrr = metrics_data.get("inverse_harmonic_mean_rank")
+        hits_at_1 = metrics_data.get("hits_at_1")
+        hits_at_3 = metrics_data.get("hits_at_3")
+        hits_at_10 = metrics_data.get("hits_at_10")
+        
+        if mr is not None:
+            print(f"MR (Mean Rank): {mr:.4f}")
+        if mrr is not None:
+            print(f"MRR (Mean Reciprocal Rank): {mrr:.4f}")
+        if hits_at_1 is not None:
+            print(f"Hits@1: {hits_at_1:.4f}")
+        if hits_at_3 is not None:
+            print(f"Hits@3: {hits_at_3:.4f}")
+        if hits_at_10 is not None:
+            print(f"Hits@10: {hits_at_10:.4f}")
+        
+        print("\nВЫВОД:")
+        if mrr is not None and mrr > 0.5:
+            print("Модель показывает хорошие результаты (MRR > 0.5).")
+        elif mrr is not None and mrr > 0.3:
+            print("Модель показывает удовлетворительные результаты (MRR > 0.3).")
+        else:
+            print("Модель требует улучшения (низкий MRR).")
+        
+        if hits_at_10 is not None and hits_at_10 > 0.7:
+            print("Высокая точность в топ-10 (Hits@10 > 0.7).")
+        elif hits_at_10 is not None and hits_at_10 > 0.5:
+            print("Приемлемая точность в топ-10 (Hits@10 > 0.5).")
+        else:
+            print("Низкая точность в топ-10.")
+    else:
+        print("Метрики не найдены. Возможно, модель не была обучена с сохранением результатов.")
     
-    print("\n" + "=" * 60)
-    print("ВИЗУАЛИЗАЦИЯ")
-    print("=" * 60)
+    print("\n")
+    print("Примеры")
+
+    
+    ontology_ns = "http://example.org/hsr-ontology#"
+    class_to_entities: dict[str, list[str]] = {}
+
+    for ent_uri, types in entity_types.items():
+        if not ent_uri.startswith(ontology_ns):
+            continue
+        for t in types:
+            if not isinstance(t, str):
+                continue
+            if not t.startswith(ontology_ns):
+                continue
+            class_to_entities.setdefault(t, []).append(ent_uri)
+
+    if not class_to_entities:
+        print("Не удалось найти классы в онтологии для демонстрации.")
+    else:
+        for class_uri in sorted(class_to_entities.keys(), key=lambda u: u.split("#")[-1]):
+            class_name = class_uri.split("#")[-1]
+            representative = class_to_entities[class_uri][0]
+            rep_name = representative.split("#")[-1]
+            print(f"\n→ Класс: {class_name}")
+            print(f"  Представитель: {rep_name}")
+
+            similar = find_similar_entities(representative, model, tf, entity_types=entity_types, top_k=3)
+            if similar:
+                print("  Похожие сущности (топ-3):")
+                for sim_entity, similarity in similar:
+                    sim_name = sim_entity.split("#")[-1]
+                    print(f"    • {sim_name}: {similarity:.4f}")
+            else:
+                print("  Похожие сущности не найдены.")
+    
+    example_entity = list(tf.entity_to_id.keys())[0] 
+    example_embedding = get_entity_embedding(example_entity, model, tf)
+    if example_embedding is not None:
+        print(f"\nПример вектора встраивания для сущности '{example_entity.split('#')[-1]}':")
+        print(f"  Размерность: {len(example_embedding)}")
+        print(f"  Вектор: {example_embedding[:10]}...") 
+    
     visualize_embeddings(model, tf, method="tsne", max_labels=75, save_path="hsr_embedding_results/embeddings.png")
 
 
